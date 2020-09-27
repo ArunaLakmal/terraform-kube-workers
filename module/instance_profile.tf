@@ -25,11 +25,11 @@ EOF
 }
 
 resource "aws_iam_role_policy_attachment" "ssm-attach" {
-  role       = "${aws_iam_role.kube_master_role.name}"
+  role       = "${aws_iam_role.kube_worker_role.name}"
   policy_arn = "${data.aws_iam_policy.ssm_role_policy.arn}"
 }
 
 resource "aws_iam_role_policy_attachment" "ecs_full_access" {
-  role       = "${aws_iam_role.kube_master_role.name}"
+  role       = "${aws_iam_role.kube_worker_role.name}"
   policy_arn = "${data.aws_iam_policy.ecs_full_access.arn}"
 }
