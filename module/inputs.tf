@@ -18,6 +18,10 @@ variable "ecs_full_access_policy" {
   default = "arn:aws:iam::aws:policy/AmazonECS_FullAccess"
 }
 
+variable "s3_full_access_policy" {
+  default = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+}
+
 variable "vpc_id" {
   default = ""
 }

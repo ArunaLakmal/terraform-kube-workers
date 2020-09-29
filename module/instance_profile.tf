@@ -29,7 +29,12 @@ resource "aws_iam_role_policy_attachment" "ssm-attach" {
   policy_arn = "${data.aws_iam_policy.ssm_role_policy.arn}"
 }
 
-resource "aws_iam_role_policy_attachment" "ecs_full_access" {
+resource "aws_iam_role_policy_attachment" "ecs_full_access_attach" {
   role       = "${aws_iam_role.kube_worker_role.name}"
   policy_arn = "${data.aws_iam_policy.ecs_full_access.arn}"
+}
+
+resource "aws_iam_role_policy_attachment" "s3_full_access_attach" {
+  role = "${aws_iam_role.kube_worker_role.name}"
+  policy_arn = "${data.aws_iam_policy.s3_full_access.arn}"
 }
