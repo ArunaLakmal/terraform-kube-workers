@@ -51,7 +51,7 @@ variable "key_pair" {
 }
 
 variable "kube_worker_instance_type" {
-  default = "t2.micro"
+  default = "t2.medium"
 }
 
 variable "kube_worker_ami" {
