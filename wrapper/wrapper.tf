@@ -2,7 +2,7 @@ data "terraform_remote_state" "core" {
     backend = "s3"
 
     config = {
-        bucket = "${var.s3_bucket}"
+        bucket = "${var.bucket}"
         key = "${var.env}/${var.aws_region}/${var.paas_name}/core/terraform.tfstate"
         region = "${var.aws_region}"
     }

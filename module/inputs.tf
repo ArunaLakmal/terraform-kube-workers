@@ -26,7 +26,7 @@ variable "vpc_id" {
   default = ""
 }
 
-variable "s3_bucket" {
+variable "bucket" {
     default = ""
 }
 
