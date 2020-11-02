@@ -14,8 +14,8 @@ python3 get-pip.py
 pip install botocore boto boto3 ansible awscli
 ansible-galaxy collection install community.aws
 
-wget -P /usr/local/bin/ https://gist.githubusercontent.com/ArunaLakmal/265f83e144aa67996d72662556aec33e/raw/9216b6731dca20257f168f32f8e95b467b796143/ansible-wrapper.sh
-wget -P /etc/systemd/system/ https://gist.githubusercontent.com/ArunaLakmal/4b549c7dd7e731d398d794b89b6a6914/raw/b838c86ee1ba0b9bd5f1d1b1a22e2bb122267d18/techcrumble.service
+wget -P /usr/local/bin/ https://docs.techcrumble.net/cluster/ansible-wrapper.sh
+wget -P /etc/systemd/system/ https://docs.techcrumble.net/cluster/techcrumble.service
 chmod +x /usr/local/bin/ansible-wrapper.sh
 
 crontab<<EOF
